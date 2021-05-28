@@ -1,0 +1,33 @@
+<h1>Add user</h1>
+
+<form class="form" [formGroup]="addUserForm" id="addUserForm"
+name="addUserForm" (ngSubmit)="doAddUser()" novalidate autocomplete="off">
+
+    <div>
+        Nombre:
+        <input id="username" name="username" type="text" formControlName="username"
+        required autocomplete="false" maxlength="12">
+    </div>
+    <div>
+        Apellidos
+        <input id="apellidos" name="apellidos" type="text" formControlName="apellidos"
+        required autocomplete="false" maxlength="128">
+    </div>
+    <div>
+        Password
+        <input id="password" name="password" type="password" formControlName="password"
+        required autocomplete="false" maxlength="12">
+    </div>
+    <div>
+        Email
+        <input id="email" name="email" type="email" formControlName="email"
+        required autocomplete="false" maxlength="128">
+    </div>
+    <input type="checkbox" name="pagado" id="pagado" value="true"> <label for="pagat">Pagado</label>
+    <input type="checkbox" name="pagado" id="pagado" value="false"> <label for="pagat">Impagado</label>
+    <div>
+        <button type="submit">Add user</button>
+    </div>
+
+</form>
+

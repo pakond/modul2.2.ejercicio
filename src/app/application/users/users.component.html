@@ -1,0 +1,12 @@
+<h1>Users</h1>
+
+<ul>
+    <li *ngFor="let user of users; index as i" (click)="goToDetails(user.id)">{{user.nombre}}</li>
+</ul>
+
+<div *ngIf="selectedUser">
+    <h2>{{selectedUser.nombre}}</h2>
+    <div>{{selectedUser.apellidos}}</div>
+</div>
+<br>
+<a href="" routerLink="/adduser">Add user</a>
